@@ -49,4 +49,22 @@ public class SerializeAndDeserializeBinaryTree {
         }
         return root;
     }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(1);
+        TreeNode a = new TreeNode(2);
+        TreeNode b = new TreeNode(3);
+        TreeNode c = new TreeNode(4);
+        TreeNode d = new TreeNode(5);
+
+        root.left = a;
+        root.right = b;
+        b.left = c;
+        b.right = d;
+
+        SerializeAndDeserializeBinaryTree solution = new SerializeAndDeserializeBinaryTree();
+        String s = solution.serialize(root);
+        System.out.println(s);
+        TreeNode resulult = solution.deserialize(s);
+    }
 }
