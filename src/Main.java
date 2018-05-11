@@ -4,20 +4,16 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        TreeNode root = new TreeNode(1);
-        TreeNode a = new TreeNode(2);
-        TreeNode b = new TreeNode(3);
-        TreeNode c = new TreeNode(4);
-        TreeNode d = new TreeNode(5);
-        root.left = a;
-        root.right = b;
-        b.left = c;
-        b.right = d;
-        SerializeAndDeserializeBinaryTree solution = new SerializeAndDeserializeBinaryTree();
-        String s = solution.serialize(root);
 
-        System.out.println(s);
-        TreeNode node = solution.deserialize(s);
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>(new Comparator<Integer>(){
+            public int compare(Integer i, Integer j) {
+                return Integer.compare(i, j);
+            }
+        });
+        pq.add(1);
+        pq.add(2);
+
+        System.out.println(pq.poll());
 
     }
 

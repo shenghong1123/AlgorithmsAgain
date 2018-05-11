@@ -16,7 +16,11 @@ public class ReverseLinkedList {
     }
 
     public ListNode reverseListRecursive(ListNode head) {
-        return null;
+        if (head == null || head.next == null) return head;
+        ListNode temp = reverseListRecursive(head.next);
+        head.next.next = head;
+        head.next = null;
+        return temp;
     }
 
     public static void main(String[] args) {
