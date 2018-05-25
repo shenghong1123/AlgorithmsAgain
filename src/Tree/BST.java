@@ -54,7 +54,7 @@ public class BST {
                     stack.push(node);
                     node = node.left;
                 }
-            };
+            }
         }
     }
 

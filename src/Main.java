@@ -1,20 +1,12 @@
-import LeetCode.*;
+import Algorithms.*;
 import java.lang.*;
-import java.util.*;
+import java.util.regex.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-
-        PriorityQueue<Integer> pq = new PriorityQueue<Integer>(new Comparator<Integer>(){
-            public int compare(Integer i, Integer j) {
-                return Integer.compare(i, j);
-            }
-        });
-        pq.add(1);
-        pq.add(2);
-
-        System.out.println(pq.poll());
-
+        Pattern p = Pattern.compile("a*b");
+        Matcher m = p.matcher("aaaab");
+        boolean b = m.matches();
     }
 
     public static void printArray(int[] nums) {
