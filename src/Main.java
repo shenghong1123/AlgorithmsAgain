@@ -1,12 +1,25 @@
 import Algorithms.*;
 import java.lang.*;
-import java.util.regex.*;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Pattern p = Pattern.compile("a*b");
-        Matcher m = p.matcher("aaaab");
-        boolean b = m.matches();
+        HashMap<Integer, Integer> map = new HashMap<>();
+        Iterator<Map.Entry<Integer, Integer>> it = map.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = it.next();
+
+        }
+    }
+    static class comparator implements Comparator<Integer> {
+        @Override
+        public int compare(Integer i, Integer j) {
+            //return Integer.compare(i, j);
+            //return i - j;
+            if (i < j) return -1;
+            else if (i == j) return 0;
+            else return 1;
+        }
     }
 
     public static void printArray(int[] nums) {
